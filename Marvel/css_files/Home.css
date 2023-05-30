@@ -1,0 +1,196 @@
+.home-page-layout{
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: red;
+}
+
+/**********************************************
+* Mobile CSS Layout: Samsung S20+
+**********************************************/
+
+/*Border for content grids*/
+.section-comics, .main, .section-card, .footer{
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+/*Navigation layout*/
+.navbar-brand{
+    font-family: "OCR A Std", monospace;
+    font-size:20px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+/*Comic book layout*/
+.section-comics {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+    padding: 70px;
+}
+
+/*Main section layout*/
+.main {
+    grid-row-start: 2;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: white;
+}
+
+/*Card section layout*/
+.section-card{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+    padding: 15px;
+}
+
+
+/*Footer section*/
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: black;
+}
+
+
+/**********************************************
+* Mobile CSS Styling: Samsung 20+
+**********************************************/
+
+/*Comic book section*/
+#content-section img{
+    max-width: 240px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 3.5px solid white;
+    border-radius: 5px;
+}
+
+/*Comic book images become responsive*/
+.responsive{
+    width:100%;
+    height:auto;
+    aspect-ratio: 2/3;
+}
+
+/*Get rid of href link and stays in the image*/
+#content-section a{
+    display: contents;
+}
+
+/*Social media section*/
+.card{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+/*Font styles for cards in main*/
+#card-info, #card-welcome{
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: medium;
+    line-height: 30px;
+    padding: 10px;
+}
+
+/*Footer section*/
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+/*Animation effect for images in header*/
+#content-section img{
+
+    transform-style: preserve-3d;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    25% {
+        transform: perspective(1000px) rotateY(25deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    75% {
+        transform: perspective(1000px) rotateY(-25deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+/*********************************************************
+* Media Query Layout: Desktop 768px - 1900px for carousel
+**********************************************************/
+
+@media (min-width: 768px) and (max-width: 1900px){
+
+    .main{
+        height: fit-content;
+    }
+
+    .carousel-inner .carousel-item {
+        height: 900px;
+    }
+      
+    .carousel-item img {
+        min-height: 900px;
+    }
+
+    .carousel-main .carousel-inner{
+        width:100%;
+        height:auto;
+    }
+}
+
+/**********************************************
+* Media Query Layout: Desktop 768px and up
+**********************************************/
+@media (min-width: 768px) {
+
+    .section-comics img{
+        margin-left: 92px;
+        margin-right: 20px;
+    }
+
+    .section-comics{
+        padding: 10px;
+    }
+
+    .main {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column: span 2;
+        background-color: white;
+    }
+
+    .section-card{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: black;
+    }
+
+}

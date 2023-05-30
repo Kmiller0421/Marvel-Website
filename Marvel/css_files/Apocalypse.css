@@ -1,0 +1,247 @@
+/**********************************************
+* Mobile CSS Layout: Samsung S20+
+**********************************************/
+
+.page-layout{
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+   
+    gap: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background-color: slategrey;
+}
+
+/*Navigation layout*/
+.navbar-brand{
+    font-family: "OCR A Std", monospace;
+    font-size:20px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.character-img, .character-powers, .character-bio, .character-video, 
+.character-comic, .footer, .header{
+    border-radius: 5px;
+    border: 3.5px solid black;
+}
+
+.header{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+}
+
+.character-img{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: white;
+}
+
+.character-powers{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: white;
+    height: auto;
+}
+
+.character-bio{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background: white;
+}
+
+
+.character-comic{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: white;
+}
+
+
+.character-video{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    background: white;
+    min-height: 300px;    /*Minimum height for character-video grid*/
+}
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    background: white;
+}
+
+
+/**********************************************
+* Mobile CSS Styling: Samsung 20+
+**********************************************/
+
+.img-box img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+}
+
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    margin-top: auto;
+}
+
+#powers h2{
+    margin-bottom: 20px;
+}
+
+#powers{
+    text-align: center;
+    padding: 10px;
+    font-size: large;
+}
+
+#bio-title{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#bio{
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: medium;
+    line-height: 40px;
+    padding: 15px;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*Animation effect for comic book*/
+.character-comic{
+
+    transform-style: preserve-3d;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    25% {
+        transform: perspective(1000px) rotateY(10deg);
+    }
+    50% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    75% {
+        transform: perspective(1000px) rotateY(-10deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+}
+
+/**********************************************
+* Media Query Layout: Desktop 886px and up
+**********************************************/
+@media (min-width: 886px){
+    .apocalypse-page-layout{
+        min-height: 100vh;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+       
+        gap: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+    
+        background-color: slategrey;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+    }
+
+    .character-img{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: white;
+    }
+    
+    .character-bio{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        background: white;
+    }
+
+    .character-powers{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        background: white;
+        height: auto;
+    }
+    
+    .character-comic{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: white;
+    }
+    
+    .character-video{
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        background: white;
+        height: 300px;    /*Minimum height for character-video grid*/
+    }
+}
+
+
+/**********************************************
+* Media Query Layout: Desktop 300px and down
+**********************************************/
+@media (max-width: 300px){
+    .header{
+        font-size: 20px;
+    }
+}
