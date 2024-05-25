@@ -1,5 +1,5 @@
 # Marvel Top-Five XMEN Villians - Website
-This is my first website using HTML, CSS and Bootstrap as my framework. I created five webpages that show a image, comic book, biography and video
+This is my first website using HTML, CSS and Bootstrap as my css framework. I created five webpages that show a image, comic book, biography and video
 about a specific villian you are looking at. I also created a moblie version and added page responsiveness to the website as well.
 
 # Purpose - :black_nib:
